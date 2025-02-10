@@ -1,0 +1,4 @@
+# requirements.txt
+
+# Colorama is a cross-platform library for colored terminal text
+colorama==0.4.4
