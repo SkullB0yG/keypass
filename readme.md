@@ -6,5 +6,5 @@ KeyPass is a project designed to manage and store your passwords securely. This 
 
 ## Languages / Idiomas
 
-- [English](README_en.md)
-- [Español](README_es.md)
+- [English](readme_en.md)
+- [Español](readme_es.md)
