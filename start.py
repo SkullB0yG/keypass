@@ -45,12 +45,12 @@ def help():
     db: objeto de la importacion de database que gestiona la base de datos realiza las crud 
 '''
 controller = True
-db=db.Database("database.db")
-
+db=db.Database("/home/skull/scripts/keypass/database.db")
 
 '''
     este while permite ejecutar de manera recurrente las funciones y comandos que se pueden ejecutar
 '''
+
 while controller:
 
     terminal = shell()
@@ -82,8 +82,10 @@ while controller:
     elif terminal[0] == "view":
         try:
             user = db.read_records("users")
-            for i in user:
-                print(rainbow.Color(color="green", text=f"[*] {i}"))
+	         
+            for row in user:
+                id, user, password, plataform = row 
+                print(rainbow.Color(color="green", text=f"[*] ID {id} User -> {user}\tPasswd -> {password}\tPlataform -> {plataform}"))
         except Exception as e:
             print(rainbow.Color(color="red", text=f"[!] Alert {str(e)}"))
 
